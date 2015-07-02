@@ -39,7 +39,8 @@ config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
   address:               'smtp.gmail.com',
   port:                  587,
-  domain:                'example.com',
+  #domain:                'example.com',
+ domain:                'herokuapp.com',
   user_name:             'natsuki.23th.anniversary@gmail.com',
   password:              ENV["GPASS"],
   authentication:        'plain',
