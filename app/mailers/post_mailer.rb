@@ -1,5 +1,5 @@
 class PostMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "natsuki.23th.anniversary@gmail.com"
 
   def post_email(user, post)
     @name = post.name

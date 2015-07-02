@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        PostMailer.post_email("s.sugimoto.419@gmail.com", @post).deliver
+        PostMailer.post_email("natsuki.23th.anniversary@gmail.com", @post).deliver
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
       else
