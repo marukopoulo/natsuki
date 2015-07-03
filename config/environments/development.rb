@@ -46,6 +46,6 @@ config.action_mailer.smtp_settings = {
   authentication:        'plain',
   enable_starttls_auto:  true
 }
-config.action_mailer.default_url_options = { :host => "https://www.herokuapp.com" }
+
 
 end

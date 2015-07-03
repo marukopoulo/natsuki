@@ -12,6 +12,11 @@ class PostsController < ApplicationController
   def show
   end
 
+  def sendMail
+    @post = Post.find(1);
+    PostMailer.post_email("natsuki.23th.anniversary@gmail.com", @post).deliver
+  end
+
   # GET /posts/new
   def new
     @post = Post.new
