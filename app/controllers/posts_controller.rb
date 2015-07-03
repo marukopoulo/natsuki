@@ -13,8 +13,12 @@ class PostsController < ApplicationController
   end
 
   def sendMail
-    @post = Post.find(1);
-    PostMailer.post_email("natsuki.23th.anniversary@gmail.com", @post).deliver
+    @post = Post.where(send_count: 0).first
+    if PostMailer.post_email("natsuki.23th.anniversary@gmail.com", @post).deliver
+    @post.send_count  = @post.send_count + 1
+    @post.send_date = Date.today
+    @post.save
+   end
   end
 
   # GET /posts/new
@@ -33,7 +37,6 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        PostMailer.post_email("natsuki.23th.anniversary@gmail.com", @post).deliver
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
       else
@@ -75,6 +78,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:name, :content)
+      params.require(:post).permit(:name, :content,:send_count)
     end
 end

@@ -5,6 +5,8 @@
     <tr>
       <th>Name</th>
       <th>Content</th>
+      <th>Send_count</th>
+      <th>send_date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +16,8 @@
       <tr>
         <td><%= post.name %></td>
         <td><%= post.content %></td>
+        <td><%= post.send_count %></th>
+          <td><%= post.send_date %></th>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
