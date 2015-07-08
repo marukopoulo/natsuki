@@ -18,6 +18,8 @@ class PostsController < ApplicationController
     @post.send_count  = @post.send_count + 1
     @post.send_date = Date.today
     @post.save
+    logger = Logger.new('log/sendMail.log')
+    logger.info "#{Time.now} -- send mail. -- send to #{@post.name} and content is #{@post.content}"
    end
   end
 
