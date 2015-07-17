@@ -29,12 +29,21 @@
     </div>
     <%= error_span(@post[:content]) %>
   </div>
+
   <div class="control-group">
     <%= f.label :send_date, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :send_date, :class => 'form-control' %>
+      <%= f.date_field :send_date, :class => 'form-control' %>
     </div>
     <%= error_span(@post[:send_date]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :send_count, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :send_count, :class => 'form-control' %>
+    </div>
+    <%= error_span(@post[:send_count]) %>
   </div>
 
 
