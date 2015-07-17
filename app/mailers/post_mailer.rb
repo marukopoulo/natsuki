@@ -4,6 +4,6 @@ class PostMailer < ActionMailer::Base
   def post_email(user, post)
     @name = post.name
     @content = post.content
-    mail to: user, subject: "今日のメッセージ"
+    mail to: user, subject: "本日のメッセージ"
   end
 end

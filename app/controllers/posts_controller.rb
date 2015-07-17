@@ -4,7 +4,19 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    #@posts = Post.all
+    @posts = Post.page(params[:page])
+  end
+
+  def main
+    @firstPost = Post.where.not(send_count: 0).order("id DESC").first
+    @posts = Post.page(params[:page]).where.not(send_count: 0).order("id DESC")
+    #now = Time.current
+    #@posts = Post.where.(send_date: now.beginning_of_day)
+  end
+
+  def past
+    @posts = Post.page(params[:page]).where.not(send_count: 0).order("id DESC")
   end
 
   # GET /posts/1

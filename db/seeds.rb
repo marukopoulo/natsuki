@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+100.times do |i|
+  Post.create!(
+    name:    "名前#{i}",
+    content: "111-#{sprintf("%04d", i)}"
+  )
+end

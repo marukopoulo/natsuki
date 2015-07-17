@@ -4,6 +4,7 @@ ruby '2.1.2'
 
 gem 'rails', '4.1.4'
 
+gem 'kaminari'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.8'
 gem 'bcrypt'

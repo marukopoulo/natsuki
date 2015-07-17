@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color:#E9E8E8;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -67,3 +67,75 @@ div {
     list-style: square;
   }
 }
+
+
+
+.logo{
+  margin-left:10%;
+  margin-bottom:20px;
+}
+
+.top-image{
+  text-align:center;
+}
+
+.botton-image{
+  text-align:center;
+}
+
+.botton-image img{
+  width:50px;
+  margin:50px 0 40px;
+}
+
+.message{
+  
+}
+
+.message-name{
+margin:20px 0 20px;
+text-align:center;
+}
+
+.message-name p{
+  font-size: 32px;
+  font-family: ＭＳ 明朝,serif;
+}
+
+
+.message-date{
+  text-align:center;
+  color:gray;
+  margin-bottom:50px;
+  font-family: ＭＳ 明朝,serif;
+
+}
+
+
+.message-content{
+padding:0px 20%;
+}
+
+.message-content p{
+  font-family: ＭＳ 明朝,serif;
+}
+
+.past-botton{
+  text-align:center;
+  margin:50px 0 50px;
+}
+
+.past-botton img{
+  width:160px;
+}
+
+.tm img{
+  width:250px;
+  margin-bottom:40px;
+}
+
+.pm img{
+  width:250px;
+  margin:30px 0 10px;
+}
+

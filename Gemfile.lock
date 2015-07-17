@@ -312,6 +312,7 @@ DEPENDENCIES
   jbuilder (= 1.0.2)
   jpmobile
   jquery-rails
+  kaminari
   koala
   less-rails
   minitest

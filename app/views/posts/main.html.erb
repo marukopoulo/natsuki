@@ -1,0 +1,40 @@
+<%- model_class = Post -%>
+<div class="logo">
+<h1><%= link_to image_tag('/images/logo.png'),root_path %></h1>
+</div>
+<div class = "top-image" style = "text-align:center" >
+  <%= image_tag '/images/natsuki-top.png' %>
+  </div>
+
+
+
+  <div class = "botton-image">
+    <%= image_tag '/images/disk.png' %>
+
+  </div>
+
+  <div class = "tm" style = "text-align:center;">
+      <%= image_tag '/images/tm2.png'%>
+  </div>
+
+  <div class = "message">
+  <div class = "message-name">
+    <p><%= @firstPost.name %></p>
+  </div>
+  <div class ="message-date">
+    <i><%= @firstPost.send_date.day %>. <%= @firstPost.send_date.strftime("%B") %> <%= @firstPost.send_date.year %></i>
+  </div>
+  <div class ="message-content">
+    <p><%= @firstPost.content %></p>
+  </div>
+
+
+  <div class = "past-botton">
+    <%= link_to image_tag('/images/past-botton.png' ),"/past" %>
+  </div>
+
+</div>
+
+<hr>
+
+
