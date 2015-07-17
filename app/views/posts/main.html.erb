@@ -22,7 +22,8 @@
     <p><%= @firstPost.name %></p>
   </div>
   <div class ="message-date">
-    <i><%= @firstPost.send_date.day %>. <%= @firstPost.send_date.strftime("%B") %> <%= @firstPost.send_date.year %></i>
+    <% send_date = @firstPost.send_date + 1 %>
+    <i><%= send_date.day %>. <%= send_date.strftime("%B") %> <%= send_date.year %></i>
   </div>
   <div class ="message-content">
     <p><%= @firstPost.content %></p>

@@ -21,8 +21,8 @@
     <p><%= post.name %></p>
   </div>
   <div class ="message-date">
-    <i><%= post.send_date.day %>. <%= post.send_date.strftime("%B") %> <%= post.send_date.year %></i>
-  </div>
+    <% send_date = post.send_date + 1 %>
+    <i><%= send_date.day %>. <%= send_date.strftime("%B") %> <%= send_date.year %></i>  </div>
   <div class ="message-content">
     <p><%= post.content %></p>
   </div>
