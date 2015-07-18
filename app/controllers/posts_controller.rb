@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
   def sendMail
     @post = Post.where(send_count: 0).first
-    if PostMailer.post_email("natsuki.23th.anniversary@gmail.com", @post).deliver
+    if PostMailer.post_email("natsukihara87@gmail.com", @post).deliver
     @post.send_count  = @post.send_count + 1
     @post.send_date = Date.today
     @post.save
